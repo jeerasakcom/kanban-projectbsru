@@ -18,6 +18,7 @@
                 @dragenter.prevent="drop_zone_enter"
                 @dragleave.prevent="drop_zone_leave"
                 @dragover.prevent
+                @drop="drop_item(index,task_index)"
                 >
 
                 </div>
@@ -63,6 +64,10 @@ export default {
             event.target.style.borderStyle = "none";
             event.target.style.transition = "height 0.5s";
         },
+        drop_item(column_index,task_index){
+            console.log(column_index,task_index)
+
+        }
     },
     data(){
         return{
